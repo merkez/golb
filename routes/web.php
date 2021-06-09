@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\UsersController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +19,8 @@ use App\Http\Controllers\PostsController;
 Route::get('/', [PagesController::class, 'welcome']);
 
 Route::resource('/posts', PostsController::class);
+
+Route::resource('/users', UsersController::class)->middleware('auth');
 
 Auth::routes();
 
