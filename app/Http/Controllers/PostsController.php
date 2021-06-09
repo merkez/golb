@@ -9,6 +9,16 @@ use \Cviebrock\EloquentSluggable\Services\SlugService;
 class PostsController extends Controller
 {
     /**
+     * Middleware to allow guest access
+     * for certain functionalities only
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except'=>['index', 'show']]);
+    }
+
+    
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

@@ -36,13 +36,24 @@
                 </h1>
                 <ul class="flex flex-col space-y-2 sm:flex-row sm:flex-wrap sm:space-x-8 sm:space-y-0">
                     <li>
-                        <a href="/posts" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Posts">Posts</a>
+                        <a href="/posts" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Posts">
+                            Posts
+                        </a>
                     </li>
                     <li>
-                        <a href="https://github.com/msskzx/bloj" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Forge">Bloj</a>
+                        <a href="https://github.com/msskzx/golb" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Posts">
+                            Golb
+                        </a>
                     </li>
                     <li>
-                        <a href="https://github.com/msskzx" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="GitHub">GitHub</a>
+                        <a href="https://github.com/msskzx/bloj" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Forge">
+                            Bloj
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/msskzx" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="GitHub">
+                            GitHub
+                        </a>
                     </li>
                 </ul>
             </div>
