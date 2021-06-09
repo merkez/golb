@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -26,7 +27,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('auth.register');
     }
 
     /**
@@ -37,7 +38,20 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+        
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'slug' => SlugService::createSlug(User::class, 'slug', $request->name),
+            'password' => Hash::make($request->password)
+        ]);
+
+        return redirect('/users')->with('message', 'User has been created successfully!');
     }
 
     /**

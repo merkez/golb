@@ -7,6 +7,14 @@
         </div>
     </div>
 
+    <div class="pt-15 w-4/5 m-auto">
+        <a 
+            href="/users/create"
+            class="bg-blue-500 uppercase px-5 bg-transparent text-gray-100 text-xs font-extrabold py-3 px-3 rounded-3xl">
+            Create user
+        </a>
+    </div>
+
 @foreach ($users as $user)
     <div class="sm:grid grid-cols-2 gap-20 py-15 mx-auto w-4/5 border-b border-gray-200">
         <div>
