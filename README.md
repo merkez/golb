@@ -9,15 +9,17 @@ A simple blog using Laravel 8.
 - MySQL `8.0`
 
 ## Features
-- Guest/User can:
+- Guest can:
+    - login
     - List posts
     - Read posts
     - Register
 - User can:
-    - Login
     - Logout
     - List users
     - Delete users
+    - Create users
+    - Edit users
     - Create posts
     - Edit posts
     - Delete posts

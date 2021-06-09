@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class RegisterController extends Controller
 {
@@ -67,7 +68,7 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'slug' => SlugService::createSlug(User::class, 'slug', $request->name),
+            'slug' => SlugService::createSlug(User::class, 'slug', $data['name']),
             'password' => Hash::make($data['password'])
         ]);
     }
