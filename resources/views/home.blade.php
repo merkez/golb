@@ -13,12 +13,21 @@
         <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
 
             <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
-                Dashboard
+                Tip of the Day
             </header>
 
             <div class="w-full p-6">
                 <p class="text-gray-700">
-                    You are logged in!
+                    One 2012 study concluded that drinking coffee in moderation, or consuming around two 8-ounce servings per day, may protect against heart failure.
+                    <br>    
+                    <br>    
+                    People who drank moderate amounts of coffee each day had an 11% lower risk of heart failure than those who did not.
+                    <br>    
+                    <br>    
+                    One 2017 meta-analysisTrusted Source found that caffeine consumption may have at least a small benefit for cardiovascular health, including blood pressure.
+                    <br>    
+                    <br>    
+                    Some studies, however, found higher levels of blood lipids (fat) and cholesterol in people who consumed more coffee.
                 </p>
             </div>
         </section>

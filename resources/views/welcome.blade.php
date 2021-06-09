@@ -17,14 +17,12 @@
 <div class="flex flex-col">
     @if(Route::has('login'))
         <div class="absolute top-0 right-0 mt-4 mr-4 space-x-4 sm:mt-6 sm:mr-6 sm:space-x-6">
-            @auth
-                <a href="{{ url('/home') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Home') }}</a>
-            @else
+            @guest
                 <a href="{{ route('login') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Login') }}</a>
                 @if (Route::has('register'))
                     <a href="{{ route('register') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Register') }}</a>
                 @endif
-            @endauth
+            @endguest
         </div>
     @endif
 
@@ -36,8 +34,8 @@
                 </h1>
                 <ul class="flex flex-col space-y-2 sm:flex-row sm:flex-wrap sm:space-x-8 sm:space-y-0">
                     <li>
-                        <a href="/posts" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Posts">
-                            Posts
+                        <a href="/home" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase" title="Posts">
+                            Home
                         </a>
                     </li>
                     <li>
