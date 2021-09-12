@@ -1,0 +1,31 @@
+name: Build and  Publish Docker
+on:
+  push:
+    tags:
+      - 'v*.*.*' ## will be the tag of docker image
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Publish golb to Docker Registry
+        uses: docker/build-push-action@v1
+        with:
+          repository: mrturkmen/globphp
+          username: mrturkmen
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          dockerfile: ./Dockerfile
+          tag_with_ref: true
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
