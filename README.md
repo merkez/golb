@@ -1,6 +1,8 @@
 # Golb
 
+
 A simple blog using Laravel 8.
+
 
 ## Environment
 - Laravel `8.4`
@@ -67,4 +69,8 @@ Here I did not integrated deployment pipeline (-no server/service provided to be
 I have added release and test CI files for Github Actions. They can be checked from [workflows](.github/workflows/) folder.
 
 For any further questions or tasks, I am happy to answer and complete them. If something is missing or misleading, it would be nice to notify me, as soon as possible. 
+
+Note: This is a challenge assigned by Metzler-Vater (https://www.metzler-vater.com/en/) Company for Workstudent Devops Position. The challenge was to create Dockerfile and dokcer-compose files by explaning about them and provide some information about how to deploy it. Completed  [13.09.2021]
+
+
 
